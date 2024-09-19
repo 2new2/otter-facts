@@ -1,47 +1,65 @@
-body {
-    font-family: Arial, sans-serif;
+/* General Styling */
+body,
+html {
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Prevents scrollbars */
-    position: relative;
-}
-
-.container {
+    font-family: 'Arial', sans-serif;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    background-color: #f0f8ff;
+}
+
+.container {
     text-align: center;
+    width: 100%;
+    padding: 20px;
 }
 
 .fact-box {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-#fact-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #007bff;
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+p {
+    font-size: 1.5rem;
+    color: #555;
+    margin: 20px 0;
+}
+
+small {
+    display: block;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: #4CAF50;
     color: white;
-    font-size: 16px;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-    position: relative;
-    z-index: 1;
 }
 
-#fact-button:hover {
-    background-color: #0056b3;
+button:hover {
+    background-color: #45a049;
 }
 
-.floating-otter {
-    position: absolute;
-    font-size: 2rem;
-    user-select: none;
-    animation: float 10s ease-in-out infinite;
+button:focus {
+    outline: none;
 }
 
 #otter1 {
@@ -49,17 +67,40 @@ body {
 }
 
 #otter2 {
-    animation-delay: 5s; /* Starts floating at a different time */
+    animation-delay: 5s;
+    /* Starts floating at a different time */
 }
 
 @keyframes float {
     0% {
         transform: translateX(-100px) translateY(0);
     }
+
     50% {
         transform: translateX(calc(100vw - 50px)) translateY(calc(50vh - 50px));
     }
+
     100% {
         transform: translateX(-100px) translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .fact-box {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
     }
 }
