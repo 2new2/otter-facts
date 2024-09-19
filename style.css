@@ -71,6 +71,14 @@ button:focus {
     /* Starts floating at a different time */
 }
 
+
+.floating-otter {
+    position: absolute;
+    font-size: 2rem;
+    user-select: none;
+    animation: float 10s ease-in-out infinite;
+}
+
 @keyframes float {
     0% {
         transform: translateX(-100px) translateY(0);
