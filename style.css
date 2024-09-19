@@ -80,16 +80,8 @@ button:focus {
 }
 
 @keyframes float {
-    0% {
-        transform: translateX(-100px) translateY(0);
-    }
-
     50% {
         transform: translateX(calc(100vw - 50px)) translateY(calc(50vh - 50px));
-    }
-
-    100% {
-        transform: translateX(-100px) translateY(0);
     }
 }
 
