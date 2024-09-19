@@ -1,21 +1,31 @@
-// Function to fetch and display a random otter fact
+let lastIndex = null;
+
+document.addEventListener('DOMContentLoaded', () => {
+    showRandomFact(); // Show a fact when the page loads
+});
+
 function showRandomFact() {
     fetch('facts.json')
-    .then(response => response.json())
-    .then(data => {
-        const facts = data.facts;
-        const randomFact = facts[Math.floor(Math.random() * facts.length)];
-        document.getElementById('fact').innerText = randomFact.fact;
-        document.getElementById('source').innerText = randomFact.source ? `Source: ${randomFact.source}` : '';
-    })
-    .catch(error => {
-        console.error('Error fetching the facts:', error);
-        document.getElementById('fact').innerText = 'Failed to load fact.';
-        document.getElementById('source').innerText = '';
-    });
+        .then(response => response.json())
+        .then(data => {
+            const facts = data.facts;
+            let randomIndex;
+            
+            // Ensure the new fact is different from the last one
+            do {
+                randomIndex = Math.floor(Math.random() * facts.length);
+            } while (randomIndex === lastIndex);
+            
+            const randomFact = facts[randomIndex];
+            lastIndex = randomIndex;
+            
+            // Update the fact and source on the page
+            document.getElementById('fact').textContent = randomFact.fact;
+            document.getElementById('source').innerHTML = `Source: <a href="${randomFact.link}" target="_blank">${randomFact.source}</a>`;
+        })
+        .catch(error => {
+            console.error('Error fetching the facts:', error);
+            document.getElementById('fact').textContent = 'Failed to load a fact.';
+            document.getElementById('source').textContent = '';
+        });
 }
-
-// Automatically load a random fact when the page loads
-window.onload = function() {
-    showRandomFact();
-};
