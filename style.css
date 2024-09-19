@@ -9,7 +9,6 @@ html {
     justify-content: center;
     align-items: center;
     background-color: #f0f8ff;
-    background-repeat: repeat;
     background-image: url('images/background.jpg');
     overflow: hidden; /* Prevent scrollbars from appearing */
 }
@@ -83,17 +82,17 @@ button:focus {
 }
 
 /* Horizontal bouncing animation */
-@keyframes floatX {
+@keyframes float {
     0% {
-        transform: translateX(0); /* Start at the left side */
+        transform: translateX(-50px) translateY(-50px); /* Starting position */
     }
 
     50% {
-        transform: translateX(calc(100vw - 50px)); /* Move to the right edge */
+        transform: translateX(calc(100vw - 50px)) translateY(calc(100vh - 50px)); /* Mid-point position */
     }
 
     100% {
-        transform: translateX(0); /* Return to the start */
+        transform: translateX(-50px) translateY(-50px); /* End position (same as start) */
     }
 }
 
