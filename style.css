@@ -1,3 +1,4 @@
+/* General Styling */
 body,
 html {
     margin: 0;
@@ -8,7 +9,7 @@ html {
     justify-content: center;
     align-items: center;
     background-color: #f0f8ff;
-    overflow: hidden; 
+    overflow: hidden; /* Prevent scrollbars from appearing */
 }
 
 .container {
@@ -62,42 +63,41 @@ button:focus {
     outline: none;
 }
 
+/* Floating Otters */
 .floating-otter {
     position: absolute;
     font-size: 2rem; 
     user-select: none;
-    animation: float 600s ease-in-out infinite; /* Bouncing animation */
+    animation: floatX 10s linear infinite; /* Horizontal bounce animation */
 }
 
+/* Otter positions */
 #otter1 {
     top: 10%;
-    left: 10%;
+    animation-delay: 0s; /* Otter 1 starts immediately */
 }
 
 #otter2 {
-    bottom: 10%;
-    right: 10%;
+    top: 20%; /* Positioned lower than otter 1 */
+    animation-delay: 5s; /* Delay for the second otter */
 }
 
-/* Bouncing Animation */
-@keyframes float {
-    0%, 100% {
-        transform: translate(0, 0); /* Starting and ending at original position */
-    }
-
-    25% {
-        transform: translate(calc(100vw - 50px), 0); /* Move horizontally to the right edge */
+/* Horizontal bouncing animation */
+@keyframes floatX {
+    0% {
+        transform: translateX(0); /* Start at the left side */
     }
 
     50% {
-        transform: translate(calc(100vw - 50px), calc(100vh - 50px)); /* Bottom-right corner */
+        transform: translateX(calc(100vw - 50px)); /* Move to the right edge */
     }
 
-    75% {
-        transform: translate(0, calc(100vh - 50px)); /* Move vertically to the bottom-left corner */
+    100% {
+        transform: translateX(0); /* Return to the start */
     }
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .fact-box {
         padding: 20px;
