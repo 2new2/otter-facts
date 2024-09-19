@@ -9,6 +9,8 @@ html {
     justify-content: center;
     align-items: center;
     background-color: #f0f8ff;
+    background-repeat: repeat;
+    background-image: url('images/background.jpg');
     overflow: hidden; /* Prevent scrollbars from appearing */
 }
 
@@ -74,12 +76,10 @@ button:focus {
 /* Otter positions */
 #otter1 {
     top: 10%;
-    animation-delay: 0s; /* Otter 1 starts immediately */
 }
 
 #otter2 {
-    top: 20%; /* Positioned lower than otter 1 */
-    animation-delay: 5s; /* Delay for the second otter */
+    top: 12%; /* Positioned lower than otter 1 */
 }
 
 /* Horizontal bouncing animation */
