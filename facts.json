@@ -1,14 +1,44 @@
 {
     "facts": [
-        "Otters hold hands while sleeping so they don’t drift away from each other.",
-        "There are 13 different species of otters around the world.",
-        "Sea otters have the densest fur of any mammal, with about 1 million hairs per square inch.",
-        "Otters use tools like rocks to break open shellfish.",
-        "Otters can stay underwater for up to 8 minutes.",
-        "Baby otters are called pups and are born blind.",
-        "Otters are known for their playful behavior and often slide down muddy banks.",
-        "River otters can swim up to 7 miles per hour.",
-        "Sea otters eat up to 25% of their body weight in food every day.",
-        "Otters have a special pouch where they store their favorite rock."
+        {
+            "fact": "Otters hold hands while sleeping so they don’t drift away from each other.",
+            "source": "National Geographic"
+        },
+        {
+            "fact": "There are 13 different species of otters around the world.",
+            "source": "WWF"
+        },
+        {
+            "fact": "Sea otters have the densest fur of any mammal, with about 1 million hairs per square inch.",
+            "source": "Monterey Bay Aquarium"
+        },
+        {
+            "fact": "Otters use tools like rocks to break open shellfish.",
+            "source": "Animal Planet"
+        },
+        {
+            "fact": "Otters can stay underwater for up to 8 minutes.",
+            "source": "Sea Otter Savvy"
+        },
+        {
+            "fact": "Baby otters are called pups and are born blind.",
+            "source": ""
+        },
+        {
+            "fact": "Otters are known for their playful behavior and often slide down muddy banks.",
+            "source": "Smithsonian's National Zoo"
+        },
+        {
+            "fact": "River otters can swim up to 7 miles per hour.",
+            "source": ""
+        },
+        {
+            "fact": "Sea otters eat up to 25% of their body weight in food every day.",
+            "source": "Monterey Bay Aquarium"
+        },
+        {
+            "fact": "Otters have a special pouch where they store their favorite rock.",
+            "source": "SeaWorld"
+        }
     ]
 }
