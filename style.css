@@ -10,7 +10,7 @@ html {
     align-items: center;
     background-color: #f0f8ff;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     background-image: url('images/background.jpg');
     overflow: hidden; /* Prevent scrollbars from appearing */
 }
@@ -51,7 +51,7 @@ small {
 button {
     padding: 8px 16px;
     font-size: 1rem;
-    background-color: #4CAF50;
+    background-color: #2372da;
     color: white;
     border: none;
     border-radius: 5px;
@@ -77,10 +77,12 @@ button:focus {
 /* Otter positions */
 #otter1 {
     top: 10%;
+    animation-delay: 0ms;
 }
 
 #otter2 {
-    top: 12%; /* Positioned lower than otter 1 */
+    top: 12%;
+    animation-delay: 0ms;
 }
 
 /* Horizontal bouncing animation */
