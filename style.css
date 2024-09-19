@@ -9,6 +9,8 @@ html {
     justify-content: center;
     align-items: center;
     background-color: #f0f8ff;
+    background-repeat: no-repeat;
+    background-size: auto;
     background-image: url('images/background.jpg');
     overflow: hidden; /* Prevent scrollbars from appearing */
 }

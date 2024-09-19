@@ -21,7 +21,7 @@ function showRandomFact() {
             
             // Update the fact and source on the page
             document.getElementById('fact').textContent = randomFact.fact;
-            document.getElementById('source').innerHTML = `Source: <a href="${randomFact.link}" target="_blank">${randomFact.source}</a>`;
+            document.getElementById('source').innerHTML = `Want to know more?: <a href="${randomFact.link}" target="_blank">${randomFact.source}</a>`;
         })
         .catch(error => {
             console.error('Error fetching the facts:', error);
