@@ -66,18 +66,38 @@ button:focus {
     animation-delay: 0s;
 }
 
-.floating-otter {
-    position: absolute;
-    font-size: 2rem;
-    user-select: none;
-    animation: float 10s ease-in-out infinite;
+#otter1 {
+    top: 10%;
+    left: 10%;
 }
 
+#otter2 {
+    bottom: 10%;
+    right: 10%;
+}
+
+.floating-otter {
+    position: absolute;
+    font-size: 2rem; 
+    user-select: none;
+    animation: float 20s ease-in-out infinite;
+}
+
+
 @keyframes float {
+    0% {
+        transform: translateX(-50px) translateY(-50px); /* Starting position */
+    }
+
+    50% {
+        transform: translateX(calc(100vw - 50px)) translateY(calc(100vh - 50px)); /* Mid-point position */
+    }
+
     100% {
-        transform: translateX(calc(100vw - 50px)) translateY(calc(50vh - 50px));
+        transform: translateX(-50px) translateY(-50px); /* End position (same as start) */
     }
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
