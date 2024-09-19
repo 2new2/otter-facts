@@ -11,3 +11,8 @@ function showRandomFact() {
         console.error('Error fetching the facts:', error);
     });
 }
+
+// Automatically load a random fact when the page loads
+window.onload = function() {
+    showRandomFact();
+};
