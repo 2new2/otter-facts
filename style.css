@@ -9,6 +9,7 @@ html {
     justify-content: center;
     align-items: center;
     background-color: #f0f8ff;
+    overflow: hidden; /* Ensure no scrollbars appear */
 }
 
 .container {
@@ -62,10 +63,15 @@ button:focus {
     outline: none;
 }
 
-#otter1 #otter2 {
-    animation-delay: 0s;
+/* Floating Otters */
+.floating-otter {
+    position: absolute;
+    font-size: 2rem; 
+    user-select: none;
+    animation: bounce 10s ease-in-out infinite; /* Bouncing animation */
 }
 
+/* Individual otter positions */
 #otter1 {
     top: 10%;
     left: 10%;
@@ -76,28 +82,24 @@ button:focus {
     right: 10%;
 }
 
-.floating-otter {
-    position: absolute;
-    font-size: 2rem; 
-    user-select: none;
-    animation: float 20s ease-in-out infinite;
-}
+/* Bouncing Animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(0, 0); /* Starting and ending at original position */
+    }
 
-
-@keyframes float {
-    0% {
-        transform: translateX(-50px) translateY(-50px); /* Starting position */
+    25% {
+        transform: translate(calc(100vw - 50px), 0); /* Move horizontally to the right edge */
     }
 
     50% {
-        transform: translateX(calc(100vw - 50px)) translateY(calc(100vh - 50px)); /* Mid-point position */
+        transform: translate(calc(100vw - 50px), calc(100vh - 50px)); /* Bottom-right corner */
     }
 
-    100% {
-        transform: translateX(-50px) translateY(-50px); /* End position (same as start) */
+    75% {
+        transform: translate(0, calc(100vh - 50px)); /* Move vertically to the bottom-left corner */
     }
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
