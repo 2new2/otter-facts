@@ -62,15 +62,9 @@ button:focus {
     outline: none;
 }
 
-#otter1 {
+#otter1 #otter2 {
     animation-delay: 0s;
 }
-
-#otter2 {
-    animation-delay: 5s;
-    /* Starts floating at a different time */
-}
-
 
 .floating-otter {
     position: absolute;
@@ -80,7 +74,7 @@ button:focus {
 }
 
 @keyframes float {
-    50% {
+    10% {
         transform: translateX(calc(100vw - 50px)) translateY(calc(50vh - 50px));
     }
 }
